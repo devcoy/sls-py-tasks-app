@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab9dfe2b-5143-4066-8889-4a999cbf52fd" name="Changes" comment="" />
+    <list default="true" id="ab9dfe2b-5143-4066-8889-4a999cbf52fd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/tasks/create/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tasks/create/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tasks/delete/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tasks/delete/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tasks/get/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tasks/get/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tasks/update/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tasks/update/app.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +19,9 @@
   "associatedIndex": 3
 }]]></component>
   <component name="ProjectId" id="2b8v0jZqlmFtHZDVUs4SgeO9BYQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,9 +30,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/dev/PycharmProjects/slsAppTasks"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
