@@ -1,9 +1,9 @@
 version = 0.1
 [default.deploy.parameters]
-stack_name = "sls-python-app-tasks"
+stack_name = "sls-py-tasks-app"
 resolve_s3 = true
-s3_prefix = "sls-python-app-tasks"
+s3_prefix = "sls-py-tasks-app"
 region = "us-east-1"
 capabilities = "CAPABILITY_IAM"
-parameter_overrides = "StageName=\"Dev\""
+parameter_overrides = "StageName=\"Dev\" ProjectKey=\"sls-py-tasks-app\""
 image_repositories = []
