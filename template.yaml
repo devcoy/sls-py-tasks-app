@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  sls-app-tasks
-
-  Sample SAM Template for sls-app-tasks using Python
+  sls-py-tasks-app
+  
+  Task Serverless app with Python
 
 # ...................................................................................................
 # ...................................................................................................
@@ -29,6 +29,10 @@ Parameters:
     Type: String
     Default: Dev
     Description: Stage name for the API
+  ProjectKey:
+    Type: String
+    Default: sls-py-tasks-app
+    Description: Project key to use as prefix in the resources
 
 # ...................................................................................................
 # ...................................................................................................
@@ -77,9 +81,11 @@ Resources:
   #   1.3.1 Create a Tasks Function
   # .................................................................................................
   # .................................................................................................
-  CreateTasksFunction:
+  CreateTaskFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: !Sub '${ProjectKey}-CreateTaskFunction'
+      Description: 'Lambda function to create a Task'
       CodeUri: src/app/tasks/create/
       Handler: app.lambda_handler
       Architectures:
@@ -104,6 +110,8 @@ Resources:
   GetTasksFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: !Sub '${ProjectKey}-GetTasksFunction'
+      Description: 'Lambda function to get Tasks (all or by id)'
       CodeUri: src/app/tasks/get/
       Handler: app.lambda_handler
       Architectures:
@@ -122,12 +130,14 @@ Resources:
             Method: get
   # .................................................................................................
   # .................................................................................................
-  #   1.3.3 Update a Tasks Function
+  #   1.3.3 Update a Task Function
   # .................................................................................................
   # .................................................................................................
-  UpdateTasksFunction:
+  UpdateTaskFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: !Sub '${ProjectKey}-UpdateTaskFunction'
+      Description: 'Lambda function to update a Task by id'
       CodeUri: src/app/tasks/update/
       Handler: app.lambda_handler
       Architectures:
@@ -146,12 +156,14 @@ Resources:
             Method: put
   # .................................................................................................
   # .................................................................................................
-  #   1.3.4 Delete a Tasks Function
+  #   1.3.4 Delete a Task Function
   # .................................................................................................
   # .................................................................................................
-  DeleteTasksFunction:
+  DeleteTaskFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: !Sub '${ProjectKey}-DeleteTaskFunction'
+      Description: 'Lambda function to delete a Task by id'
       CodeUri: src/app/tasks/delete/
       Handler: app.lambda_handler
       Architectures:
